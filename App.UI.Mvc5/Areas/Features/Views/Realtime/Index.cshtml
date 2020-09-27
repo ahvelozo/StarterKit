@@ -1,0 +1,51 @@
+﻿@model EmptyViewModel
+
+<!-- Meta -->
+
+@{
+	ViewBag.MenuSection = "Realtime";
+}
+
+<!-- Sections -->
+
+@section page_scripts_init {
+	<script src="~/areas/features/scripts/realtime.js"></script>
+}
+
+<!-- Page Contents -->
+
+<div class="container">
+	<div class="py-5 text-center">
+		<h2>SignalR Integration</h2>
+		<p class="lead">Integrated SignalR databus for realtime data processing.</p>
+	</div>
+</div>
+
+<div class="container">
+
+	<form>
+
+		<div class="row">
+
+			<div class="col-lg">
+				@Html.AntiForgeryToken()
+				<div class="form-group">
+					<label>Payload</label>
+					<textarea name="payload" id="payload" class="form-control" rows="5"></textarea>
+					<small class="form-text text-muted">* Try opening other windows in different browsers and devices to check this out.</small>
+				</div>
+				<a id="realtimeSampleData" class="btn btn-outline-primary pull-right" href="@Url.Action("BroadcastData", "Realtime")">Broadcast</a>
+			</div>
+
+			<div class="col-lg">
+				<div class="form-group">
+					<label>Received Data</label>
+					<div id="receivedData" class="bg-light" style="white-space: pre-wrap;min-height:300px;"></div>
+				</div>
+			</div>
+
+		</div>
+
+	</form>
+
+</div>

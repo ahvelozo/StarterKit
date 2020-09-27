@@ -1,0 +1,89 @@
+﻿@using App.UI.Mvc5.Infrastructure
+
+@model BaseViewModel
+
+@{
+	var culture = User.Culture;
+	var uiCulture = User.UICulture;
+	var pageTitle = $"{Model?.PageTitle ?? GetLocalizedString("Welcome")} | {GetLocalizedString("AppName")}";
+}
+
+<!doctype html>
+
+<html data-region="@culture.Name" lang="@uiCulture.TwoLetterISOLanguageName">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>@pageTitle</title>
+
+	<link rel="icon" href="~/Favicon.ico" />
+	<link type="text/plain" rel="author" href="~/Humans.txt" />
+
+	<link href="~/Assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="~/Assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="~/Assets/vendor/magnific-popup/magnific-popup.min.css" rel="stylesheet" />
+	<link href="~/Assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
+	<link href="~/Assets/vendor/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" />
+	<link href="~/Assets/vendor/pnotify/pnotify.css" rel="stylesheet" />
+	<link href="~/Assets/vendor/nprogress/nprogress.min.css" rel="stylesheet" />
+	<link href="~/Assets/vendor/animate-css/animate.min.css" rel="stylesheet" />
+	<link href="~/Assets/stylesheet/app.css" rel="stylesheet" />
+
+	@RenderSection("page_styles", required: false)
+
+</head>
+
+<body>
+
+	@RenderBody()
+
+	@Html.FeedbackSummary()
+
+	@Html.Partial("DefaultDeleteDialogTemplate")
+
+	<!-- SCRIPTS -->
+
+	@Html.RenderAdminScriptResourcesTag(User.Culture, User.UICulture)
+
+	<script src="~/Assets/vendor/jquery/jquery.min.js"></script>
+	<script src="~/Assets/vendor/js-cookie/js.cookie.min.js"></script>
+	<script src="~/Assets/javascript/config.cookies.js"></script>
+	<script src="~/Assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="~/Assets/vendor/holder/holder.min.js"></script>
+	<script src="~/Assets/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
+	<script src="~/Assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="~/Assets/vendor/pnotify/pnotify.js"></script>
+	<script src="~/Assets/vendor/nprogress/nprogress.min.js"></script>
+	<script src="~/Assets/vendor/moment-js/moment-with-locales.min.js"></script>
+	<script src="~/Assets/javascript/config.globalization.js"></script>
+	<script src="~/Assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+	@Html.RenderLocalizedScriptTag("~/Assets/vendor/bootstrap-datepicker/locales/bootstrap-datepicker.{0}.min.js", User.Culture)
+	<script src="~/Assets/javascript/config.datepicker.js"></script>
+	<script src="~/Assets/vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+	<script src="~/Assets/javascript/config.timepicker.js"></script>
+	<script src="~/Assets/vendor/jquery-validate/jquery.validate.min.js"></script>
+	<script src="~/Assets/javascript/config.jquery.validate.js"></script>
+	<script src="~/Assets/vendor/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+	<script src="~/Assets/javascript/config.jquery.validate.unobtrusive.js"></script>
+	<script src="~/Assets/vendor/singalr/jquery.signalR.min.js"></script>
+	<script src="~/signalr/hubs"></script>
+	@RenderSection("page_scripts", required: false)
+	<script src="~/Assets/javascript/base.infra.js"></script>
+	<script src="~/Assets/javascript/service.modal.js"></script>
+	<script src="~/Assets/javascript/service.model-state.js"></script>
+	<script src="~/Assets/javascript/service.notification.js"></script>
+	<script src="~/Assets/javascript/service.progress.js"></script>
+	<script src="~/Assets/javascript/service.table.js"></script>
+	<script src="~/Assets/javascript/service.upload.js"></script>
+	<script src="~/Assets/javascript/service.validation.js"></script>
+	<script src="~/Assets/javascript/setup.feedback.js"></script>
+	<script src="~/Assets/javascript/setup.tooltips.js"></script>
+
+	@RenderSection("page_scripts_init", required: false)
+
+</body>
+</html>

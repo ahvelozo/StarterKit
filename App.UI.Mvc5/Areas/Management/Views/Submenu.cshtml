@@ -1,0 +1,26 @@
+﻿@using App.UI.Mvc5.Areas.Management
+
+<!-- Mesta -->
+
+@{
+	var submenuTitle = ViewBag.MenuSection ?? string.Empty;
+}
+
+<!-- Page Contents -->
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+
+	<h5 class="my-0 mr-md-auto font-weight-normal">@submenuTitle</h5>
+
+	<nav class="navbar navbar-light my-2 my-md-0 mr-md-3">
+		<ul class="nav submenu">
+			<li class="nav-item @Menu.IfActiveItem("management.logs", "active")">
+				<a class="p-2 text-dark nav-link" href="@Url.Action("Index", "Logs", new { area = AppAreas.GetAreaName(Area.Management) })">@(GetLocalizedString<AreaResources>("Logs"))</a>
+			</li>
+			<li class="nav-item @Menu.IfActiveItem("management.users", "active")">
+				<a class="p-2 text-dark nav-link" href="@Url.Action("Index", "Users", new { area = AppAreas.GetAreaName(Area.Management) })">@(GetLocalizedString<AreaResources>("Users"))</a>
+			</li>
+		</ul>
+	</nav>
+
+</div>

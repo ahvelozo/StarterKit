@@ -1,0 +1,1009 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E79AE2B3-C9E9-441C-BE4E-77B8D6291EF9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App.UI.Mvc5</RootNamespace>
+    <AssemblyName>Sarto.App.UI.Mvc5</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptModuleKind />
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Antlr" Version="3.5.0.2" />
+    <PackageReference Include="CloudinaryDotNet" Version="1.8.0" />
+    <PackageReference Include="FluentValidation" Version="8.4.0" />
+    <PackageReference Include="FluentValidation.Mvc5" Version="8.4.0" />
+    <PackageReference Include="FluentValidation.ValidatorAttribute" Version="8.4.0" />
+    <PackageReference Include="Humanizer.Core" Version="2.6.2" />
+    <PackageReference Include="ImageResizer" Version="4.2.5" />
+    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNet.Identity.Owin" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.7" />
+    <PackageReference Include="Microsoft.AspNet.SignalR.Core" Version="2.4.1" />
+    <PackageReference Include="Microsoft.AspNet.SignalR.SystemWeb" Version="2.4.1" />
+    <PackageReference Include="Microsoft.AspNet.Web.Optimization" Version="1.1.3" />
+    <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.7" />
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Net.Compilers" Version="3.1.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Owin" Version="4.0.1" />
+    <PackageReference Include="Microsoft.Owin.Host.SystemWeb" Version="4.0.1" />
+    <PackageReference Include="Microsoft.Owin.Security" Version="4.0.1" />
+    <PackageReference Include="Microsoft.Owin.Security.Cookies" Version="4.0.1" />
+    <PackageReference Include="Microsoft.Owin.Security.OAuth" Version="4.0.1" />
+    <PackageReference Include="Microsoft.Web.Infrastructure" Version="1.0.0.0" />
+    <PackageReference Include="Microsoft.Web.LibraryManager.Build">
+      <Version>2.0.48</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Owin" Version="1.0" />
+    <PackageReference Include="RestSharp" Version="106.6.10" />
+    <PackageReference Include="Serilog" Version="2.8.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.4.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.0.1-dev-00796" />
+    <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="5.1.3-dev-00212" />
+    <PackageReference Include="Serilog.Sinks.PeriodicBatching" Version="2.2.0" />
+    <PackageReference Include="SimpleInjector" Version="4.6.1" />
+    <PackageReference Include="SimpleInjector.Integration.Web" Version="4.6.1" />
+    <PackageReference Include="SimpleInjector.Integration.Web.Mvc" Version="4.6.1" />
+    <PackageReference Include="System.Collections.Concurrent" Version="4.3.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+    <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    <PackageReference Include="ValueInjecter" Version="3.1.3" />
+    <PackageReference Include="WebGrease" Version="1.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\.readme.txt" />
+    <Content Include="Areas\Features\Scripts\forms-and-validation.js" />
+    <Content Include="Areas\Features\Scripts\realtime.js" />
+    <Content Include="Areas\Management\Scripts\logs.index.js" />
+    <Content Include="Areas\Management\Scripts\users.index.js" />
+    <Content Include="Areas\Management\Scripts\users.manager.js" />
+    <Content Include="Areas\Users\Scripts\account.login.js" />
+    <Content Include="Areas\Users\Scripts\account.password-change.js" />
+    <Content Include="Areas\Users\Scripts\account.password-recover.js" />
+    <Content Include="Areas\Users\Scripts\account.password-set-new.js" />
+    <Content Include="Areas\Users\Scripts\account.signup.js" />
+    <Content Include="Areas\Users\Scripts\profile.edit.js" />
+    <Content Include="Assets\.readme.txt" />
+    <Content Include="Assets\images\logo.svg" />
+    <Content Include="Assets\vendor\animate-css\animate.css" />
+    <Content Include="Assets\vendor\animate-css\animate.min.css" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.css" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker3.css" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker3.min.css" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker-en-CA.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ar-tn.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.bn.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.br.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.en-CA.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.en-IE.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.en-NZ.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.en-ZA.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.hi.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.km.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.oc.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.si.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ta.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.tg.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.tk.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.uz-cyrl.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.uz-latn.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Assets\vendor\bootstrap-timepicker\css\bootstrap-timepicker.css" />
+    <Content Include="Assets\vendor\bootstrap-timepicker\css\bootstrap-timepicker.min.css" />
+    <Content Include="Assets\vendor\bootstrap-timepicker\js\bootstrap-timepicker.js" />
+    <Content Include="Assets\vendor\bootstrap-timepicker\js\bootstrap-timepicker.min.js" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Assets\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Assets\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Assets\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\vendor\holder\holder.js" />
+    <Content Include="Assets\vendor\holder\holder.min.js" />
+    <Content Include="Assets\vendor\jquery-placeholder\jquery.placeholder.js" />
+    <Content Include="Assets\vendor\jquery-placeholder\jquery.placeholder.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\additional-methods.js" />
+    <Content Include="Assets\vendor\jquery-validate\additional-methods.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\jquery.validate.js" />
+    <Content Include="Assets\vendor\jquery-validate\jquery.validate.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ar.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ar.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_az.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_az.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_bg.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_bg.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_bn_BD.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_bn_BD.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ca.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ca.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_cs.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_cs.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_da.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_da.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_de.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_de.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_el.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_el.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_es.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_es.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_es_AR.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_es_AR.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_es_PE.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_es_PE.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_et.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_et.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_eu.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_eu.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_fa.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_fa.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_fi.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_fi.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_fr.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_fr.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ge.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ge.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_gl.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_gl.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_he.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_he.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_hr.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_hr.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_hu.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_hu.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_hy_AM.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_hy_AM.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_id.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_id.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_is.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_is.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_it.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_it.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ja.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ja.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ka.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ka.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_kk.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_kk.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ko.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ko.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_lt.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_lt.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_lv.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_lv.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_mk.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_mk.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_my.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_my.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_nl.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_nl.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_no.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_no.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_pl.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_pl.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_pt_BR.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_pt_BR.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_pt_PT.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_pt_PT.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ro.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ro.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ru.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ru.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sd.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sd.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_si.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_si.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sk.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sk.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sl.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sl.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sr.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sr.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sr_lat.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sr_lat.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sv.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sv.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_th.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_th.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_tj.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_tj.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_tr.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_tr.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_uk.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_uk.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ur.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ur.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_vi.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_vi.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_zh.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_zh.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_zh_TW.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_zh_TW.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_de.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_de.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_es_CL.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_es_CL.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_fi.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_fi.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_nl.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_nl.min.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_pt.js" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_pt.min.js" />
+    <Content Include="Assets\vendor\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Assets\vendor\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Assets\vendor\jquery\core.js" />
+    <Content Include="Assets\vendor\jquery\jquery.js" />
+    <Content Include="Assets\vendor\jquery\jquery.min.js" />
+    <Content Include="Assets\vendor\jquery\jquery.slim.js" />
+    <Content Include="Assets\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Assets\vendor\js-cookie\js.cookie.js" />
+    <Content Include="Assets\vendor\js-cookie\js.cookie.min.js" />
+    <Content Include="Assets\vendor\magnific-popup\jquery.magnific-popup.js" />
+    <Content Include="Assets\vendor\magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="Assets\vendor\magnific-popup\magnific-popup.css" />
+    <Content Include="Assets\vendor\magnific-popup\magnific-popup.min.css" />
+    <Content Include="Assets\vendor\moment-js\locale\af.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ar-dz.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ar-kw.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ar-ly.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ar-ma.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ar-sa.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ar-tn.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ar.js" />
+    <Content Include="Assets\vendor\moment-js\locale\az.js" />
+    <Content Include="Assets\vendor\moment-js\locale\be.js" />
+    <Content Include="Assets\vendor\moment-js\locale\bg.js" />
+    <Content Include="Assets\vendor\moment-js\locale\bm.js" />
+    <Content Include="Assets\vendor\moment-js\locale\bn.js" />
+    <Content Include="Assets\vendor\moment-js\locale\bo.js" />
+    <Content Include="Assets\vendor\moment-js\locale\br.js" />
+    <Content Include="Assets\vendor\moment-js\locale\bs.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ca.js" />
+    <Content Include="Assets\vendor\moment-js\locale\cs.js" />
+    <Content Include="Assets\vendor\moment-js\locale\cv.js" />
+    <Content Include="Assets\vendor\moment-js\locale\cy.js" />
+    <Content Include="Assets\vendor\moment-js\locale\da.js" />
+    <Content Include="Assets\vendor\moment-js\locale\de-at.js" />
+    <Content Include="Assets\vendor\moment-js\locale\de-ch.js" />
+    <Content Include="Assets\vendor\moment-js\locale\de.js" />
+    <Content Include="Assets\vendor\moment-js\locale\dv.js" />
+    <Content Include="Assets\vendor\moment-js\locale\el.js" />
+    <Content Include="Assets\vendor\moment-js\locale\en-au.js" />
+    <Content Include="Assets\vendor\moment-js\locale\en-ca.js" />
+    <Content Include="Assets\vendor\moment-js\locale\en-gb.js" />
+    <Content Include="Assets\vendor\moment-js\locale\en-ie.js" />
+    <Content Include="Assets\vendor\moment-js\locale\en-il.js" />
+    <Content Include="Assets\vendor\moment-js\locale\en-nz.js" />
+    <Content Include="Assets\vendor\moment-js\locale\eo.js" />
+    <Content Include="Assets\vendor\moment-js\locale\es-do.js" />
+    <Content Include="Assets\vendor\moment-js\locale\es-us.js" />
+    <Content Include="Assets\vendor\moment-js\locale\es.js" />
+    <Content Include="Assets\vendor\moment-js\locale\et.js" />
+    <Content Include="Assets\vendor\moment-js\locale\eu.js" />
+    <Content Include="Assets\vendor\moment-js\locale\fa.js" />
+    <Content Include="Assets\vendor\moment-js\locale\fi.js" />
+    <Content Include="Assets\vendor\moment-js\locale\fo.js" />
+    <Content Include="Assets\vendor\moment-js\locale\fr-ca.js" />
+    <Content Include="Assets\vendor\moment-js\locale\fr-ch.js" />
+    <Content Include="Assets\vendor\moment-js\locale\fr.js" />
+    <Content Include="Assets\vendor\moment-js\locale\fy.js" />
+    <Content Include="Assets\vendor\moment-js\locale\gd.js" />
+    <Content Include="Assets\vendor\moment-js\locale\gl.js" />
+    <Content Include="Assets\vendor\moment-js\locale\gom-latn.js" />
+    <Content Include="Assets\vendor\moment-js\locale\gu.js" />
+    <Content Include="Assets\vendor\moment-js\locale\he.js" />
+    <Content Include="Assets\vendor\moment-js\locale\hi.js" />
+    <Content Include="Assets\vendor\moment-js\locale\hr.js" />
+    <Content Include="Assets\vendor\moment-js\locale\hu.js" />
+    <Content Include="Assets\vendor\moment-js\locale\hy-am.js" />
+    <Content Include="Assets\vendor\moment-js\locale\id.js" />
+    <Content Include="Assets\vendor\moment-js\locale\is.js" />
+    <Content Include="Assets\vendor\moment-js\locale\it.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ja.js" />
+    <Content Include="Assets\vendor\moment-js\locale\jv.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ka.js" />
+    <Content Include="Assets\vendor\moment-js\locale\kk.js" />
+    <Content Include="Assets\vendor\moment-js\locale\km.js" />
+    <Content Include="Assets\vendor\moment-js\locale\kn.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ko.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ky.js" />
+    <Content Include="Assets\vendor\moment-js\locale\lb.js" />
+    <Content Include="Assets\vendor\moment-js\locale\lo.js" />
+    <Content Include="Assets\vendor\moment-js\locale\lt.js" />
+    <Content Include="Assets\vendor\moment-js\locale\lv.js" />
+    <Content Include="Assets\vendor\moment-js\locale\me.js" />
+    <Content Include="Assets\vendor\moment-js\locale\mi.js" />
+    <Content Include="Assets\vendor\moment-js\locale\mk.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ml.js" />
+    <Content Include="Assets\vendor\moment-js\locale\mn.js" />
+    <Content Include="Assets\vendor\moment-js\locale\mr.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ms-my.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ms.js" />
+    <Content Include="Assets\vendor\moment-js\locale\mt.js" />
+    <Content Include="Assets\vendor\moment-js\locale\my.js" />
+    <Content Include="Assets\vendor\moment-js\locale\nb.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ne.js" />
+    <Content Include="Assets\vendor\moment-js\locale\nl-be.js" />
+    <Content Include="Assets\vendor\moment-js\locale\nl.js" />
+    <Content Include="Assets\vendor\moment-js\locale\nn.js" />
+    <Content Include="Assets\vendor\moment-js\locale\pa-in.js" />
+    <Content Include="Assets\vendor\moment-js\locale\pl.js" />
+    <Content Include="Assets\vendor\moment-js\locale\pt-br.js" />
+    <Content Include="Assets\vendor\moment-js\locale\pt.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ro.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ru.js" />
+    <Content Include="Assets\vendor\moment-js\locale\sd.js" />
+    <Content Include="Assets\vendor\moment-js\locale\se.js" />
+    <Content Include="Assets\vendor\moment-js\locale\si.js" />
+    <Content Include="Assets\vendor\moment-js\locale\sk.js" />
+    <Content Include="Assets\vendor\moment-js\locale\sl.js" />
+    <Content Include="Assets\vendor\moment-js\locale\sq.js" />
+    <Content Include="Assets\vendor\moment-js\locale\sr-cyrl.js" />
+    <Content Include="Assets\vendor\moment-js\locale\sr.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ss.js" />
+    <Content Include="Assets\vendor\moment-js\locale\sv.js" />
+    <Content Include="Assets\vendor\moment-js\locale\sw.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ta.js" />
+    <Content Include="Assets\vendor\moment-js\locale\te.js" />
+    <Content Include="Assets\vendor\moment-js\locale\tet.js" />
+    <Content Include="Assets\vendor\moment-js\locale\tg.js" />
+    <Content Include="Assets\vendor\moment-js\locale\th.js" />
+    <Content Include="Assets\vendor\moment-js\locale\tl-ph.js" />
+    <Content Include="Assets\vendor\moment-js\locale\tlh.js" />
+    <Content Include="Assets\vendor\moment-js\locale\tr.js" />
+    <Content Include="Assets\vendor\moment-js\locale\tzl.js" />
+    <Content Include="Assets\vendor\moment-js\locale\tzm-latn.js" />
+    <Content Include="Assets\vendor\moment-js\locale\tzm.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ug-cn.js" />
+    <Content Include="Assets\vendor\moment-js\locale\uk.js" />
+    <Content Include="Assets\vendor\moment-js\locale\ur.js" />
+    <Content Include="Assets\vendor\moment-js\locale\uz-latn.js" />
+    <Content Include="Assets\vendor\moment-js\locale\uz.js" />
+    <Content Include="Assets\vendor\moment-js\locale\vi.js" />
+    <Content Include="Assets\vendor\moment-js\locale\x-pseudo.js" />
+    <Content Include="Assets\vendor\moment-js\locale\yo.js" />
+    <Content Include="Assets\vendor\moment-js\locale\zh-cn.js" />
+    <Content Include="Assets\vendor\moment-js\locale\zh-hk.js" />
+    <Content Include="Assets\vendor\moment-js\locale\zh-tw.js" />
+    <Content Include="Assets\vendor\moment-js\moment-with-locales.js" />
+    <Content Include="Assets\vendor\moment-js\moment-with-locales.min.js" />
+    <Content Include="Assets\vendor\moment-js\moment.js" />
+    <Content Include="Assets\vendor\moment-js\moment.min.js" />
+    <Content Include="Assets\vendor\multi-select\css\multi-select.css" />
+    <Content Include="Assets\vendor\multi-select\css\multi-select.min.css" />
+    <Content Include="Assets\vendor\multi-select\img\switch.png" />
+    <Content Include="Assets\vendor\multi-select\js\jquery.multi-select.js" />
+    <Content Include="Assets\vendor\multi-select\js\jquery.multi-select.min.js" />
+    <Content Include="Assets\vendor\nprogress\nprogress.css" />
+    <Content Include="Assets\vendor\nprogress\nprogress.js" />
+    <Content Include="Assets\vendor\nprogress\nprogress.min.css" />
+    <Content Include="Assets\vendor\nprogress\nprogress.min.js" />
+    <Content Include="Assets\vendor\pnotify\pnotify.animate.js" />
+    <Content Include="Assets\vendor\pnotify\pnotify.brighttheme.css" />
+    <Content Include="Assets\vendor\pnotify\pnotify.buttons.css" />
+    <Content Include="Assets\vendor\pnotify\pnotify.buttons.js" />
+    <Content Include="Assets\vendor\pnotify\pnotify.callbacks.js" />
+    <Content Include="Assets\vendor\pnotify\pnotify.confirm.js" />
+    <Content Include="Assets\vendor\pnotify\pnotify.css" />
+    <Content Include="Assets\vendor\pnotify\pnotify.desktop.js" />
+    <Content Include="Assets\vendor\pnotify\pnotify.history.css" />
+    <Content Include="Assets\vendor\pnotify\pnotify.history.js" />
+    <Content Include="Assets\vendor\pnotify\pnotify.js" />
+    <Content Include="Assets\vendor\pnotify\pnotify.mobile.css" />
+    <Content Include="Assets\vendor\pnotify\pnotify.mobile.js" />
+    <Content Include="Assets\vendor\pnotify\pnotify.nonblock.css" />
+    <Content Include="Assets\vendor\pnotify\pnotify.nonblock.js" />
+    <Content Include="Assets\stylesheet\app.css" />
+    <Content Include="Assets\vendor\singalr\jquery.signalR.js" />
+    <Content Include="Assets\vendor\singalr\jquery.signalR.min.js" />
+    <Content Include="Controllers\.readme.txt" />
+    <Content Include="Favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Humans.txt" />
+    <Content Include="Infrastructure\.readme.txt" />
+    <Content Include="Models\.readme.txt" />
+    <Content Include="Assets\.info\service.template.js" />
+    <Content Include="Areas\Users\Views\Account\Box.cshtml" />
+    <Content Include="Areas\Users\Views\Account\LogIn.cshtml" />
+    <Content Include="Areas\Users\Views\Account\PasswordChange.cshtml" />
+    <Content Include="Areas\Users\Views\Account\PasswordRecover.cshtml" />
+    <Content Include="Areas\Users\Views\Account\PasswordRecoverMessage.cshtml" />
+    <Content Include="Areas\Users\Views\Account\PasswordRecoverSuccess.cshtml" />
+    <Content Include="Areas\Users\Views\Account\PasswordSetNew.cshtml" />
+    <Content Include="Areas\Users\Views\Account\SignUp.cshtml" />
+    <Content Include="Areas\Users\Views\Account\VerifyEmail.cshtml" />
+    <Content Include="Areas\Users\Views\Account\VerifyEmailMessage.cshtml" />
+    <Content Include="Areas\Users\Views\Account\VerifyEmailMessageSent.cshtml" />
+    <Content Include="Areas\Users\Views\Account\VerifyEmailSuccess.cshtml" />
+    <Content Include="Areas\Users\Views\Account\_LayoutAccount.cshtml" />
+    <Content Include="Areas\Users\Views\Account\_ViewStart.cshtml" />
+    <Content Include="Areas\Users\Views\Profile\Edit.cshtml" />
+    <Content Include="Areas\Users\Views\_LayoutArea.cshtml" />
+    <Content Include="Areas\Users\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Users\Views\Account\Locked.cshtml" />
+    <Content Include="Areas\Management\Views\Logs\Index.cshtml" />
+    <Content Include="Areas\Management\Views\Submenu.cshtml" />
+    <Content Include="Areas\Management\Views\Users\Form.cshtml" />
+    <Content Include="Areas\Management\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Management\Views\Users\Manager.cshtml" />
+    <Content Include="Areas\Management\Views\Users\UserCreatedMessage.cshtml" />
+    <Content Include="Areas\Management\Views\_LayoutArea.cshtml" />
+    <Content Include="Areas\Management\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Features\Views\FormsAndValidation\Index.cshtml" />
+    <Content Include="Areas\Features\Views\Realtime\Index.cshtml" />
+    <Content Include="Areas\Features\Views\_LayoutArea.cshtml" />
+    <Content Include="Areas\Features\Views\_ViewStart.cshtml" />
+    <Content Include="libman.json" />
+    <Content Include="Assets\vendor\jquery\jquery.min.map" />
+    <Content Include="Assets\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Assets\javascript\base.infra.js" />
+    <Content Include="Assets\javascript\service.notification.js" />
+    <Content Include="Assets\javascript\service.modal.js" />
+    <Content Include="Assets\javascript\service.upload.js" />
+    <Content Include="Assets\javascript\service.validation.js" />
+    <Content Include="Assets\javascript\service.table.js" />
+    <Content Include="Assets\javascript\config.timepicker.js" />
+    <Content Include="Assets\javascript\config.jquery.validate.unobtrusive.js" />
+    <Content Include="Assets\javascript\config.jquery.validate.js" />
+    <Content Include="Assets\javascript\config.globalization.js" />
+    <Content Include="Assets\javascript\config.datepicker.js" />
+    <Content Include="Assets\javascript\config.cookies.js" />
+    <Content Include="Assets\javascript\service.progress.js" />
+    <Content Include="Assets\javascript\service.model-state.js" />
+    <Content Include="Assets\javascript\setup.tooltips.js" />
+    <Content Include="Assets\javascript\setup.feedback.js" />
+    <Content Include="Assets\.info\script.template.js" />
+    <Content Include="Views\.readme.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedAppAssemblyInfo.cs">
+      <Link>Properties\SharedAppAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Areas\Blank\AreaResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AreaResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Blank\Controllers\OverviewController.cs" />
+    <Compile Include="Areas\Blank\Controllers\_LandingController.cs" />
+    <Compile Include="Areas\Blank\Controllers\_MenuController.cs" />
+    <Compile Include="Areas\Blank\Controllers\__AreaBaseController.cs" />
+    <Compile Include="Areas\Features\Controllers\GlobalizationController.cs" />
+    <Compile Include="Areas\Features\Models\PromoCodeInfoViewModel.cs" />
+    <Compile Include="Areas\Features\Models\GlobalizationViewModel.cs" />
+    <Compile Include="Areas\Features\Models\GlobalizationViewModelValidator.cs" />
+    <Compile Include="Areas\Features\Models\SamplePaymentTypesEnum.cs" />
+    <Compile Include="Areas\Management\AreaResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AreaResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Users\AreaResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AreaResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Features\Controllers\FormsAndValidationController.cs" />
+    <Compile Include="Areas\Features\Controllers\OverviewController.cs" />
+    <Compile Include="Areas\Features\Controllers\RealtimeController.cs" />
+    <Compile Include="Areas\Features\Controllers\_MenuController.cs" />
+    <Compile Include="Areas\Features\Controllers\_LandingController.cs" />
+    <Compile Include="Areas\Features\Controllers\__AreaBaseController.cs" />
+    <Compile Include="Areas\Features\AreaResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AreaResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Features\Models\FormsAndValidationViewModel.cs" />
+    <Compile Include="Areas\Features\Models\FormsAndValidationViewModelValidator.cs" />
+    <Compile Include="Areas\Management\Controllers\LogsController.cs" />
+    <Compile Include="Areas\Management\Controllers\UsersController.cs" />
+    <Compile Include="Areas\Management\Controllers\_LandingController.cs" />
+    <Compile Include="Areas\Management\Controllers\__AreaBaseController.cs" />
+    <Compile Include="Areas\Management\Models\Logs\LogEntryViewModel.cs" />
+    <Compile Include="Areas\Management\Models\Logs\LogsIndexViewModel.cs" />
+    <Compile Include="Areas\Management\Models\Users\UserCreatedMessageViewModel.cs" />
+    <Compile Include="Areas\Management\Models\Users\UsersIndexViewModel.cs" />
+    <Compile Include="Areas\Management\Models\Users\UserViewModel.cs" />
+    <Compile Include="Areas\Management\Models\Users\UserViewModelValidator.cs" />
+    <Compile Include="Areas\Users\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Users\Controllers\ProfileController.cs" />
+    <Compile Include="Areas\Users\Controllers\_LandingController.cs" />
+    <Compile Include="Areas\Users\Controllers\__AreaBaseController.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountActionStatus.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountLogInViewModel.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountLogInViewModelValidator.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountPasswordChangeViewModel.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountPasswordChangeViewModelValidator.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountPasswordRecoverMessageViewModel.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountPasswordRecoverResponseViewModel.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountPasswordRecoverResponseViewModelValidator.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountPasswordRecoverViewModel.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountPasswordRecoverViewModelValidator.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountSignUpViewModel.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountSignUpViewModelValidator.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountVerifyEmailMessageViewModel.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountVerifyEmailViewModel.cs" />
+    <Compile Include="Areas\Users\Models\Account\AccountVerifyEmailViewModelValidator.cs" />
+    <Compile Include="Areas\Users\Models\Profile\ProfileEditViewModel.cs" />
+    <Compile Include="Areas\Users\Models\Profile\ProfileEditViewModelValidator.cs" />
+    <Compile Include="Controllers\BlobsController.cs" />
+    <Compile Include="Controllers\_MenuController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Infrastructure\Blobs\BlobUploadResult.cs" />
+    <Compile Include="Infrastructure\Cookies\GetCookie.cs" />
+    <Compile Include="Infrastructure\Cookies\SetCookie.cs" />
+    <Compile Include="Infrastructure\SerilogActivityIdEnricher.cs" />
+    <Compile Include="Infrastructure\DirectRouteProvider.cs" />
+    <Compile Include="Infrastructure\Feedback\FeedbackContext.cs" />
+    <Compile Include="Infrastructure\Feedback\FeedbackMessage.cs" />
+    <Compile Include="Infrastructure\Feedback\FeedbackMessageType.cs" />
+    <Compile Include="Infrastructure\Feedback\FeedbackSummary.cs" />
+    <Compile Include="Infrastructure\Globalization\GlobalizationManager.cs" />
+    <Compile Include="Infrastructure\Globalization\GlobalizationService.cs" />
+    <Compile Include="Infrastructure\Globalization\IGlobalizationService.cs" />
+    <Compile Include="Infrastructure\Globalization\LocalizedDisplayAttribute.cs" />
+    <Compile Include="Infrastructure\ImageResizer\ImageResizerInfra.cs" />
+    <Compile Include="Infrastructure\ImageResizer\Plugin\ImageResizerThumbPlugin.cs" />
+    <Compile Include="Infrastructure\ImageResizer\Plugin\ImageResizerThumbVirtualFile.cs" />
+    <Compile Include="Infrastructure\ImageResizer\IImageResizerThumbService.cs" />
+    <Compile Include="Infrastructure\ImageResizer\ImageResizerThumbService.cs" />
+    <Compile Include="Infrastructure\MenuTracker\MenuData.cs" />
+    <Compile Include="Infrastructure\MenuTracker\MenuHelperControllers.cs" />
+    <Compile Include="Infrastructure\MenuTracker\MenuHelperViewPages.cs" />
+    <Compile Include="Infrastructure\MenuTracker\MenuTrackingAgentAttribute.cs" />
+    <Compile Include="Infrastructure\MenuTracker\TrackMenuItemAttribute.cs" />
+    <Compile Include="Infrastructure\Realtime\IRealtimeService.cs" />
+    <Compile Include="Infrastructure\Realtime\RealtimeService.cs" />
+    <Compile Include="Infrastructure\SerilogTextFormatter.cs" />
+    <Compile Include="Infrastructure\UrlExtensions\GetHomeUrl.cs" />
+    <Compile Include="Infrastructure\Validation\RequiredCheckboxValidator.cs" />
+    <Compile Include="Infrastructure\Validation\ValidationLanguageManager.cs" />
+    <Compile Include="Infrastructure\HtmlExtension\RenderLocalizedScriptTag.cs" />
+    <Compile Include="Infrastructure\HtmlExtension\ToByteSizeLabel.cs" />
+    <Compile Include="Infrastructure\HtmlExtension\WithRawHtmlOutput.cs" />
+    <Compile Include="Infrastructure\HtmlExtension\WithHtmlLineBreaks.cs" />
+    <Compile Include="Infrastructure\Realtime\Hubs\DatabusHub.cs" />
+    <Compile Include="Infrastructure\Realtime\Configs\HubActivator.cs" />
+    <Compile Include="Infrastructure\Realtime\Configs\SignalRCamelCaseJsonResolver.cs" />
+    <Compile Include="Infrastructure\Realtime\Configs\UserIdProvider.cs" />
+    <Compile Include="Infrastructure\HtmlExtension\RenderJsonResourcesScriptTag.cs" />
+    <Compile Include="Infrastructure\SetLayout.cs" />
+    <Compile Include="Infrastructure\AppAreas.cs" />
+    <Compile Include="Controllers\__BaseController.cs" />
+    <Compile Include="Controllers\ErrorsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\AuthorizeAttribute.cs" />
+    <Compile Include="Infrastructure\AppJsonResult.cs" />
+    <Compile Include="Infrastructure\AppViewEngine.cs" />
+    <Compile Include="Infrastructure\Validation\ValidationSummary.cs" />
+    <Compile Include="Infrastructure\AppWebViewPage.cs" />
+    <Compile Include="Infrastructure\UrlExtensions\BlobThumbnail.cs" />
+    <Compile Include="Infrastructure\Validation\SimpleInjectorValidatorFactory.cs" />
+    <Compile Include="Initializer.cs" />
+    <Compile Include="Infrastructure\Blobs\IBlobService.cs" />
+    <Compile Include="Models\.tpls\PartialViewModel.Tpl.cs" />
+    <Compile Include="Models\.tpls\ViewModel.Tpl.cs" />
+    <Compile Include="Models\EmptyPartialViewModel.cs" />
+    <Compile Include="Models\BaseViewModel.cs" />
+    <Compile Include="Models\BasePartialViewModel.cs" />
+    <Compile Include="Models\Blobs\UploadAnyViewModelValidator.cs" />
+    <Compile Include="Models\Blobs\UploadAnyViewModel.cs" />
+    <Compile Include="Models\Blobs\UploadPictureViewModel.cs" />
+    <Compile Include="Models\Blobs\UploadPictureViewModelValidator.cs" />
+    <Compile Include="Models\EmptyViewModel.cs" />
+    <Compile Include="Models\Errors\ErrorViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="Infrastructure\Blobs\BlobService.cs" />
+    <Compile Include="Infrastructure\Blobs\BlobServiceConfigs.cs" />
+    <Compile Include="AppScriptResources.Designer.cs">
+      <DependentUpon>AppScriptResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_LayoutBase.cshtml" />
+    <Content Include="Views\Errors\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\_LayoutEmails.cshtml" />
+    <Content Include="Views\.tpls\View.Tpl.cshtml" />
+    <Content Include="Views\.tpls\PartialView.Tpl.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\_LayoutInternal.cshtml" />
+    <Content Include="Views\ValidationSummaryAlerts.cshtml" />
+    <Content Include="Views\Header.cshtml" />
+    <Content Include="Views\Footer.cshtml" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ar.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_az.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_bg.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_bn_BD.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ca.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_cs.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_da.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_de.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_el.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_es.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_es_AR.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_es_PE.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_et.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_eu.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_fa.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_fi.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_fr.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ge.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_gl.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_he.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_hr.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_hu.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_hy_AM.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_id.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_is.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_it.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ja.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ka.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_kk.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ko.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_lt.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_lv.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_mk.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_my.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_nl.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_no.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_pl.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_pt_BR.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_pt_PT.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ro.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ru.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sd.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_si.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sk.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sl.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sr.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sr_lat.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_sv.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_th.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_tj.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_tr.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_uk.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_ur.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_vi.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_zh_TW.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\messages_zh.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_de.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_es_CL.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_fi.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_nl.min.js.map" />
+    <Content Include="Assets\vendor\jquery-validate\localization\methods_pt.min.js.map" />
+    <Content Include="Assets\vendor\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Assets\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Assets\vendor\pnotify\pnotify.animate.js.map" />
+    <Content Include="Assets\vendor\pnotify\pnotify.buttons.js.map" />
+    <Content Include="Assets\vendor\pnotify\pnotify.callbacks.js.map" />
+    <Content Include="Assets\vendor\pnotify\pnotify.confirm.js.map" />
+    <Content Include="Assets\vendor\pnotify\pnotify.desktop.js.map" />
+    <Content Include="Assets\vendor\pnotify\pnotify.history.js.map" />
+    <Content Include="Assets\vendor\pnotify\pnotify.js.map" />
+    <Content Include="Assets\vendor\pnotify\pnotify.mobile.js.map" />
+    <Content Include="Assets\vendor\pnotify\pnotify.nonblock.js.map" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.css.map" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css.map" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker3.css.map" />
+    <Content Include="Assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="Assets\vendor\js-cookie\js.cookie.min.js.map" />
+    <Content Include="Assets\vendor\jquery-placeholder\jquery.placeholder.min.js.map" />
+    <Content Include="Views\DefaultDeleteDialogTemplate.cshtml" />
+    <Content Include="Areas\Features\Views\TopMenuItem.cshtml" />
+    <Content Include="Areas\Features\Views\SubMenu.cshtml" />
+    <Content Include="Views\TopMenu.cshtml" />
+    <Content Include="Areas\Features\Views\Overview\Index.cshtml" />
+    <Content Include="Areas\Features\Views\Globalization\Index.cshtml" />
+    <Content Include="Areas\Users\Views\SubMenu.cshtml" />
+    <Content Include="Areas\Blank\Views\Overview\Index.cshtml" />
+    <Content Include="Areas\Blank\Views\TopMenuItem.cshtml" />
+    <Content Include="Areas\Blank\Views\_LayoutArea.cshtml" />
+    <Content Include="Areas\Blank\Views\_ViewStart.cshtml" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data.Core\Data.Core.csproj">
+      <Project>{01367635-B331-458F-BF5A-7369925864D6}</Project>
+      <Name>Data.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Identity\App.Identity.csproj">
+      <Project>{1325D974-1E9A-49C1-BC71-A5F4B9EA3293}</Project>
+      <Name>App.Identity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data.Store.SqlServer\Data.Store.SqlServer.csproj">
+      <Project>{5B6EF0E8-4213-4B43-8462-4518CC93BB56}</Project>
+      <Name>Data.Store.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data.Tools.Migrator\Data.Tools.Migrator.csproj">
+      <Project>{4b3a666d-9afb-4307-aff4-ffc7a1c02282}</Project>
+      <Name>Data.Tools.Migrator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared.Infrastructure\Shared.Infrastructure.csproj">
+      <Project>{bf47ae35-d535-4842-a89a-061b6ef70315}</Project>
+      <Name>Shared.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared.Extensions\Shared.Extensions.csproj">
+      <Project>{18AD2A68-3598-4B0C-9A49-9D6D06BC2164}</Project>
+      <Name>Shared.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared.Infrastructure.Azure\Shared.Infrastructure.Azure.csproj">
+      <Project>{3cd39eff-063e-4f38-9f73-84c0d9b3c3cc}</Project>
+      <Name>Shared.Infrastructure.Azure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared.Infrastructure.Cloudinary\Shared.Infrastructure.Cloudinary.csproj">
+      <Project>{ec24b7bc-7091-4718-90ba-8281bbbe5dac}</Project>
+      <Name>Shared.Infrastructure.Cloudinary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared.Infrastructure.DynamicImage\Shared.Infrastructure.DynamicImage.csproj">
+      <Project>{E4BFB48B-C53A-4172-B612-999AFDE10C2F}</Project>
+      <Name>Shared.Infrastructure.DynamicImage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared.Infrastructure.FileSystem\Shared.Infrastructure.FileSystem.csproj">
+      <Project>{800B272C-1753-476D-A75B-13D03F2B8DE7}</Project>
+      <Name>Shared.Infrastructure.FileSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared.Infrastructure.MailGun\Shared.Infrastructure.MailGun.csproj">
+      <Project>{88869511-342d-4785-8fa0-b16d80fbc1c8}</Project>
+      <Name>Shared.Infrastructure.MailGun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared.Infrastructure.Smtp\Shared.Infrastructure.Smtp.csproj">
+      <Project>{C0921F18-4F1B-4A00-8D7D-DE09CB184ABC}</Project>
+      <Name>Shared.Infrastructure.Smtp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain.Core\Domain.Core.csproj">
+      <Project>{1fd4b39d-6971-45c1-8bef-f6ac0f78a2c9}</Project>
+      <Name>Domain.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Areas\Blank\AreaResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\Management\AreaResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\Users\AreaResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppScriptResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppScriptResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\Features\AreaResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55161/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

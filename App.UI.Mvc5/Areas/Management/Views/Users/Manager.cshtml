@@ -1,0 +1,42 @@
+﻿@using App.UI.Mvc5.Areas.Management
+@using App.UI.Mvc5.Areas.Management.Models
+
+@model UserViewModel
+
+<!-- Meta -->
+
+@{
+	ViewBag.MenuSection = Model.Id <= 0 ? GetLocalizedString<AreaResources>("AddUser") : GetLocalizedString<AreaResources>("EditUser"); ;
+}
+
+<!-- Sections -->
+
+@section page_styles{
+	<link href="~/Assets/vendor/multi-select/css/multi-select.min.css" rel="stylesheet" />
+}
+
+@section page_scripts{
+	<script src="~/Assets/vendor/multi-select/js/jquery.multi-select.min.js"></script>
+}
+
+@section page_scripts_init {
+	<script src="~/Areas/management/scripts/users.manager.js"></script>
+}
+
+<!-- Page Contents -->
+
+<div class="container">
+
+	<form id="mainForm" method="post">
+
+		@Html.AntiForgeryToken()
+		@Html.HiddenFor(model => model.Id)
+		@Html.ValidationSummary(VisualizationMode.Alert)
+
+		@Html.Partial("Form", Model)
+
+		<button type="submit" class="btn btn-primary btn-block btn-lg mt-5">@(GetLocalizedString<AreaResources>("Save"))</button>
+
+	</form>
+
+</div>
